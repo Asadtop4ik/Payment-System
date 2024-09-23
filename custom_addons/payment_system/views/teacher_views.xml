@@ -1,0 +1,49 @@
+<odoo>
+    <record id="view_teacher_tree" model="ir.ui.view">
+        <field name="name">Teacher List</field>
+        <field name="model">payment_system.teacher</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="course_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_teacher_form" model="ir.ui.view">
+        <field name="name">Teacher Form</field>
+        <field name="model">payment_system.teacher</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="course_id"/>
+                </group>
+                <notebook>
+                    <page string="Groups">
+                        <field name="group_ids">
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_teacher" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">payment_system.teacher</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Manage teachers and their assigned courses.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_payment_system" name="Payment System" sequence="6"/>
+    <menuitem id="menu_teacher" name="Teachers" parent="menu_payment_system" action="action_teacher"/>
+
+</odoo>

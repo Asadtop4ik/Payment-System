@@ -1,0 +1,15 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Admin group -->
+        <record id="group_admin" model="res.groups">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="base.module_category_accounting"/>
+        </record>
+
+        <!-- Administrator group -->
+        <record id="group_administrator" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="base.module_category_accounting"/>
+        </record>
+    </data>
+</odoo>

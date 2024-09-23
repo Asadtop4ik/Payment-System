@@ -1,0 +1,59 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="student_tree_view" model="ir.ui.view">
+        <field name="name">student.tree.view</field>
+        <field name="model">wb.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="name1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="student_form_view" model="ir.ui.view">
+        <field name="name">student.form.view</field>
+        <field name="model">wb.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                <field name="name"/>
+                <field name="student_fees"/>
+                <field name="gender"/>
+                <field name="vip"/>
+                <field name="roll_number"/>
+                <field name="advance_gender"/>
+                <field name="name1"/>
+                <field name="name2"/>
+                <field name="address" placeholder="Address"/>
+                <field name="name3" invisible="1"/>
+                <field name="name4" readonly="1"/>
+                <field name="student_name" string="AsadStack" required="1"/>
+                </group>
+                    <group>
+                        <field name="address_html" options="{'sandboxedPreview': 'true'}"/>
+                    </group>
+
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="res_model">wb.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Root Menu -->
+    <menuitem id="wb_student_root_menu" name="Student"/>
+
+    <!-- Sub Menu -->
+    <menuitem id="wb_student_sub_root_menu" parent="wb_student_root_menu" name="Weblearns"/>
+
+    <!-- Action Menu -->
+    <menuitem id="wb_student_menu" action="student_action" name="Student List" parent="wb_student_sub_root_menu"/>
+</odoo>

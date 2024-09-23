@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_income_expense_tree" model="ir.ui.view">
+        <field name="name">Income and Expense List</field>
+        <field name="model">payment_system.income_expense</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="amount"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_income_expense_form" model="ir.ui.view">
+        <field name="name">Income and Expense Form</field>
+        <field name="model">payment_system.income_expense</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="amount"/>
+                    <field name="date"/>
+                    <field name="teacher_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_income_expense" model="ir.actions.act_window">
+        <field name="name">Income/Expense</field>
+        <field name="res_model">payment_system.income_expense</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Track income and expenses for teachers.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_payment_system" name="Payment System" sequence="3"/>
+    <menuitem id="menu_income_expense" name="Income/Expense" parent="menu_payment_system" action="action_income_expense"/>
+</odoo>

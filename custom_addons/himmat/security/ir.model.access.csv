@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_himmat_group_user,himmat.group.user,model_himmat_group,,1,1,1,1
+access_himmat_participant_user,himmat.participant.user,model_himmat_participant,,1,1,1,1

@@ -1,0 +1,20 @@
+{
+    'name': 'Payment System',
+    'version': '1.0',
+    'depends': ['base'],
+    'author': 'Asadbek',
+    'category': 'Education',
+    'summary': 'Student payment management for learning centers',
+    'data': [
+        'security/payment_system_security.xml',
+        'security/ir.model.access.csv',
+        'views/course_views.xml',
+        'views/group_views.xml',
+        'views/student_views.xml',
+        'views/teacher_views.xml',
+        'views/payment_views.xml',
+        'views/income_expense_views.xml',
+    ],
+    'installable': True,
+    'application': True,
+}
