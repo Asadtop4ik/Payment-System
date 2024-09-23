@@ -1,2 +1,2 @@
 # Payment-System
-Topshiriq so'ralgan ish custom_addons/payment_system
+Topshiriq so'ralgan ish custom_addons/payment_system da turibdi.
